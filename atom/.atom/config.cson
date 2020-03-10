@@ -1,0 +1,8 @@
+"*":
+  core:
+    telemetryConsent: "no"
+  editor: {}
+  "exception-reporting":
+    userId: "77b1bbe1-7235-4d67-93bd-74d713c8655c"
+  fonts:
+    fontFamily: "JetBrains Mono"
