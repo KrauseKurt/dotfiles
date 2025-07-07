@@ -1,2 +1,7 @@
-# dotfiles
-Personal dotfiles repository
+<div align="center">
+  
+# Dotfiles
+
+![showcase](showcase.png)
+
+</div>
