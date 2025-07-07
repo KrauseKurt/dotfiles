@@ -1,10 +1,4 @@
-<div align="center">
-  
-# Ashfall Dotfiles
-
 ![showcase](showcase.png)
-
-</div>
 
  ## My Setup
 
