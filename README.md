@@ -3,10 +3,11 @@
  ## My Setup
 
 * **OS**: CachyOS
-* **Terminal**: Kitty
+* **Terminal**: Alacritty
 * **WM**: Hyprland
 * **Bar**: Waybar
 * **Font**: JetBrains Mono
-* **Launcher**: Fuzzel
+* **Launcher**: Runner
 * **Wallpaper Manager**: Swww
 * **Notifications**: Swaync
+
