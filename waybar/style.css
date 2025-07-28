@@ -1,5 +1,5 @@
 * {
-  font-family: JetBrainsMono Nerd Font;
+  font-family: JetBrainsMono Nerd Font Propo;
   font-size: 14px;
   border: none;
   border-radius: 0;
@@ -9,8 +9,8 @@
 }
 
 window#waybar {
-  background-color: #0C0C0C;
-  color: #FFFFFF;
+  background-color: #1c1c1c;
+  color: #c6c6c6;
   min-height: 32px; /* updated height */
 }
 
@@ -32,6 +32,13 @@ window#waybar {
 }
 #custom-swaync {
   color: #FFFFFF;
+}
+#custom-battery.low {
+    color: #ff5555;  /* red */
+}
+
+#custom-battery.normal {
+    color: #ffffff;  /* default/white */
 }
 #custom-arch {
   color: #FFFFFF;

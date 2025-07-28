@@ -1,54 +1,66 @@
 [
   {
-    "output": "DP-1",
+    "output": "eDP-1",
     "layer": "top",
     "position": "top",
-    "modules-left": ["custom/arch","hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["clock"],
-    "modules-right": ["cpu","memory","pulseaudio","custom/swaync"],
+    "modules-left": ["custom/arch","hyprland/workspaces","custom/spotify"],
+    "modules-center": ["custom/clock"],
+    "modules-right": ["network","custom/brightness","pulseaudio","custom/battery"],
 
     "hyprland/workspaces": {
       "active-only": false,
       "format": "{icon}",
 	    "format-icons": {
-		    "active": "",
-		    "default": ""
+        "1": 1 ,
+        "2": 2 ,
+        "3": 3 ,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 0,
+		    "active": "󱓻",
+		    "default": "󱓻"
 	    },
       "persistent-workspaces": {
-             "DP-1": 5,
-             "DP-2": 1,
-             "DP-3": 1
+             "eDP-1": 10
        }
     },
 
-    "clock": {
-      "format": "{:%H:%M}",
-      "tooltip-format": "{:%A, %d %B %Y}"
+    "custom/clock": {
+      "interval": 60,
+      "exec": "~/.config/waybar/scripts/clock_with_cal.sh",
+      "return-type": "json"
     },
 
     "pulseaudio": {
-      "format": "   {volume}%",
+      "format": "  {volume}%",
       "on-click": "pavucontrol",
-      "format-muted": " muted"
+      "format-muted": "  muted"
     },
 
     "network": {
-      "format-wifi": " {essid} ({signalStrength}%)",
-      "format-ethernet": "󰈀 {ifname}",
-      "format-disconnected": " offline"
+      "interface": "wlan0",
+      "format-wifi": "  {essid}",
+      "format-ethernet": " 󰈀 {ifname}",
+      "format-disconnected": "  offline",
+      "tooltip": true,
+      "on-click": "alacritty -e nmtui"
+    },
+
+    "custom/bluetooth": {
+      "exec": "~/.config/waybar/scripts/bluetooth.sh",
+      "interval": 10,
+      "return-type": "json",
+      "on-click": "blueman-manager"
     },
 
     "custom/arch": {
       "format": "",  // Arch icon from Nerd Fonts
-      "tooltip": "Arch Linux",
-      "on-click": "kitty --hold neofetch",
-      "interval": 3600
-    },
-
-    "custom/swaync": {
-      "format": "",  // Arch icon from Nerd Fonts
-      "tooltip": "swaync",
-      "on-click": "swaync-client -t",
+      "tooltip": "Power Menu",
+      "on-click": "~/Git/dotfiles/scripts/walker/menu_power.sh",
       "interval": 3600
     },
 
@@ -66,6 +78,38 @@
     "hyprland/window": {
     "format": "{}",
     "separate-outputs": false
-}
+    },
+
+    "tray": {
+      "icon-size": 18,
+      "spacing": 6
+    },
+
+
+    "custom/spotify": {
+      "exec": "~/.config/waybar/scripts/spotify.sh",
+      "interval": 5,
+      "return-type": "json",
+      "on-click": "playerctl play-pause",
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous"
+    },
+
+    "custom/battery": {
+      "exec": "~/.config/waybar/scripts/battery_combined.sh",
+      "interval": 30,
+      "return-type": "json",
+      "on-click": "~/Git/dotfiles/scripts/walker/menu_powerprofiles.sh",
+    },
+
+    "custom/brightness": {
+      "exec": "~/.config/waybar/scripts/brightness.sh",
+      "interval": 5,
+      "return-type": "json",
+      "on-click": "brightnessctl set +10%",
+      "on-click-right": "brightnessctl set 10%-",
+      "on-click-middle": "brightnessctl set 100%"
+    }
+
   }
 ]
