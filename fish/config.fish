@@ -89,6 +89,9 @@ function copy
     end
 end
 
+#custom
+alias sopy='/home/kurt/Git/SOPy/.venv/bin/python /home/kurt/Git/SOPy/main.py'
+
 ## Useful aliases
 # Replace ls with eza
 #alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
