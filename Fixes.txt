@@ -1,0 +1,12 @@
+* How to fix the wrong text color on dolphin after changing qt6ct kvantum theme?
+
+Paste the following in .config/dolphinrc
+
+[UiSettings] 
+ColorScheme=Theme Name
+
+* Dolphin "open with" issue
+
+Install: sudo pacman -S archlinux-xdg-menu
+Run: XDG_MENU_PREFIX=arch- kbuildsycoca6
+Add to ENV: env = XDG_MENU_PREFIX,arch-

@@ -10,4 +10,6 @@
 * **Launcher**: Runner
 * **Wallpaper Manager**: Swww
 * **Notifications**: Swaync
+* **Kvantum Theme**: KvLibadwaita Dark
+* **Icon Theme**: 
 
