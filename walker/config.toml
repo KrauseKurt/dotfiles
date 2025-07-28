@@ -11,6 +11,7 @@ as_window = false
 timeout = 0
 disable_click_to_close = false
 force_keyboard_focus = true
+plugin_location = ["~/.config/walker/plugins"]
 
 [keys]
 accept_typeahead = ["tab"]
@@ -290,3 +291,68 @@ placeholder = "Translation"
 switcher_only = true
 provider = "googlefree"
 hidden = true
+
+#Test menu plugin
+[[plugins]]
+name = "test_menu"
+recalculate_score = true
+switcher_only = true
+show_icon_when_single = true
+
+[[plugins.entries]]
+label = "Run Option 1"
+exec = "~/Git/dotfiles/scripts/testing/test-notify1.sh"
+#icon = "system-run"
+
+[[plugins.entries]]
+label = "Run Option 2"
+exec = "~/Git/dotfiles/scripts/testing/test-notify2.sh"
+#icon = "system-run"
+
+[[plugins.entries]]
+label = "Run Option 3"
+exec = "~/Git/dotfiles/scripts/testing/test-notify3.sh"
+#icon = "system-run"
+
+######################
+# Powerprofiles menu #
+######################
+
+[[plugins]]
+name = "menu_powerprofiles"
+recalculate_score = true
+switcher_only = true
+show_icon_when_single = true
+
+[[plugins.entries]]
+label = "Auto"
+exec = "~/Git/dotfiles/scripts/walker/wrappers/wrapper_powerprofile_auto.sh"
+#icon = "battery"
+
+[[plugins.entries]]
+label = "Performance"
+exec = "~/Git/dotfiles/scripts/walker/wrappers/wrapper_powerprofile_turbo.sh"
+#icon = "uninterruptible-power-supply"
+
+[[plugins.entries]]
+label = "Power Save"
+exec = "~/Git/dotfiles/scripts/walker/wrappers/wrapper_powerprofile_powersave.sh"
+#icon = "battery-good-charging"
+
+######################
+# Powerprofiles menu #
+######################
+
+[[plugins]]
+name = "menu_power"
+recalculate_score = true
+switcher_only = true
+show_icon_when_single = true
+
+[[plugins.entries]]
+label = "Reboot"
+exec = "reboot"
+
+[[plugins.entries]]
+label = "Shutdown"
+exec = "poweroff"
